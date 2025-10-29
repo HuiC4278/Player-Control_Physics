@@ -16,7 +16,10 @@ public class PlayerScript : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
+
+        //Moves the Player forwerd and backwards
         transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
+        //Moves the player from left to right
         transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
     }
 }
